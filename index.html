@@ -100,6 +100,7 @@
             <span id="tip"></span>
             <span id="put"></span>
         </div>
+        <div id = "word">請輸入回答:<br></div>
         <div id="list"></div>
         <br>
         <br>
@@ -247,10 +248,13 @@
         var randomIndex = Math.floor(Math.random() * formattedCards.length);
         return formattedCards[randomIndex];
     }
-
+document.querySelector('#Alist').style.display = 'none';
+document.querySelector('#word').style.display = 'none';
 
     btn.onclick = function () {
         if (isButtonActive) {
+             document.querySelector('#Alist').style.display = '';
+        document.querySelector('#word').style.display = '';
             btn.style.background = '#f1516c';
             btn.style.borderColor = '#db2745';
             tip.style.display = 'block';
