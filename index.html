@@ -115,6 +115,7 @@
             <div class="submit">提交答案</div>
         </div>
         <div id="list2"></div>
+        <div id='list3'></div>
     </div>
 
 </body>
@@ -125,6 +126,7 @@
     var list = document.querySelector('#list');
     var answerInput = document.getElementById('Alist');
     var list2 = document.querySelector('#list2');
+    var list3 = document.queruSelector('#list3');
 
     var card = [
         '星星有多重？:8公克:8g',
@@ -294,6 +296,9 @@ document.querySelector('#word').style.display = 'none';
             document.getElementById('balloonCanvas').style.display = 'none';
             stopBalloonAnimation();
             list2.innerHTML = '';
+            var listItem = document.createElement('div');
+            listItem.InnerHTML = '正解:' + selectedCard.answer1;
+            list3.appendChild(listItem);
         }
         list2.appendChild(judge);  // Show the result
         answerInput.value = '';  // Clear the input for next question
