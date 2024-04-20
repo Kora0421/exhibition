@@ -100,11 +100,10 @@
             <span id="tip"></span>
             <span id="put"></span>
         </div>
-        <div id = "word">請輸入回答:<br></div>
         <div id="list"></div>
         <br>
         <br>
-        <div>請輸入回答:<br></div>
+        <div id = "word">請輸入回答:<br></div>
         <div>
             <input id="Alist" type="text"></input>
         </div>
@@ -289,10 +288,12 @@ document.querySelector('#word').style.display = 'none';
             judge.innerHTML = '答對了!';
             document.getElementById('balloonCanvas').style.display = 'block';
             startBalloonAnimation();
+            list2.innerHTML = '';
         } else {
             judge.innerHTML = '再接再厲!';
             document.getElementById('balloonCanvas').style.display = 'none';
             stopBalloonAnimation();
+            list2.innerHTML = '';
         }
         list2.appendChild(judge);  // Show the result
         answerInput.value = '';  // Clear the input for next question
